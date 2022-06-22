@@ -470,7 +470,7 @@ render(__webpack_require__(/*! ./aPage */ 2));
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
@@ -575,7 +575,7 @@ chunk (runtime: pageA, pageB) router_js.bundle.js 951 bytes [initial] [rendered]
     [used exports unknown]
     entry ./router pageA
     entry ./router pageB
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```
 
 ## Production mode
@@ -630,5 +630,5 @@ chunk (runtime: pageA, pageB) router_js.bundle.js 951 bytes [initial] [rendered]
     [no exports used]
     entry ./router pageA
     entry ./router pageB
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```

@@ -300,7 +300,7 @@ module.exports = webpackAsyncContext;
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 		
 /******/ 		}
@@ -331,7 +331,7 @@ __webpack_require__.e(/*! import() | chunk-foo */ 930).then(__webpack_require__.
 __webpack_require__.e(/*! require.ensure | chunk-foo1 */ 930).then((function(require) {
 	var foo = __webpack_require__(/*! ./templates/foo */ 2);
 	console.log('foo:', foo);
-}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+}).bind(null, __webpack_require__))['catch'](__webpack_require__.oe);
 
 var createContextVar = "r";
 __webpack_require__(1)("./ba" + createContextVar).then(function(bar) {
@@ -386,7 +386,7 @@ chunk (runtime: main) 930.output.js (chunk-foo) 38 bytes [rendered]
     [used exports unknown]
     import() ./templates/foo ./example.js 1:0-62
     cjs require ./templates/foo ./example.js 6:11-37
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```
 
 ## Production mode
@@ -424,5 +424,5 @@ chunk (runtime: main) 930.output.js (chunk-foo) 38 bytes [rendered]
     [exports: default]
     import() ./templates/foo ./example.js 1:0-62
     cjs require ./templates/foo ./example.js 6:11-37
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```

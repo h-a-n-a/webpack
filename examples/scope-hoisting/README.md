@@ -360,7 +360,7 @@ var x = "x";
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 		
 /******/ 		}
@@ -523,7 +523,7 @@ chunk (runtime: main) 872.output.js 263 bytes [rendered]
   ./lazy.js + 2 modules 221 bytes [built] [code generated]
     [exports: c, d, x, y]
     import() ./lazy ./example.js + 2 modules ./example.js 4:0-16
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```
 
 ## Production mode
@@ -545,5 +545,5 @@ chunk (runtime: main) 872.output.js 263 bytes [rendered]
   ./lazy.js + 2 modules 221 bytes [built] [code generated]
     [exports: c, d, x, y]
     import() ./lazy ./example.js + 2 modules ./example.js 4:0-16
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```

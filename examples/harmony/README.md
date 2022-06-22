@@ -289,7 +289,7 @@ function add() {
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 		
 /******/ 		}
@@ -352,13 +352,13 @@ chunk (runtime: main) output.js (main) 400 bytes (javascript) 5.54 KiB (runtime)
     [no exports]
     [used exports unknown]
     entry ./example.js main
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```
 
 ## Production mode
 
 ```
-asset output.js 2.04 KiB [emitted] [minimized] (name: main)
+asset output.js 2.03 KiB [emitted] [minimized] (name: main)
 asset 35.output.js 122 bytes [emitted] [minimized]
 chunk (runtime: main) 35.output.js 24 bytes [rendered]
   > ./async-loaded ./example.js 6:0-24
@@ -372,5 +372,5 @@ chunk (runtime: main) output.js (main) 400 bytes (javascript) 5.54 KiB (runtime)
     [no exports]
     [no exports used]
     entry ./example.js main
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```

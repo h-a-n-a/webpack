@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Dashboard = () => {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components__WEBPACK_IMPORTED_MODULE_0__.default, null), /*#__PURE__*/React.createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Checkbox, null));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components__WEBPACK_IMPORTED_MODULE_0__["default"], null), /*#__PURE__*/React.createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Checkbox, null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dashboard);
@@ -190,7 +190,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Login = () => {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components__WEBPACK_IMPORTED_MODULE_0__.default, null), /*#__PURE__*/React.createElement(_components__WEBPACK_IMPORTED_MODULE_1__.default, null));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_components__WEBPACK_IMPORTED_MODULE_0__["default"], null), /*#__PURE__*/React.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Login);
@@ -210,11 +210,11 @@ const Login = () => {
 
 ```
 asset output.js 11.1 KiB [emitted] (name: main)
-asset pages_Login_js.output.js 2.82 KiB [emitted]
-asset pages_Dashboard_js.output.js 2.78 KiB [emitted]
-chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.55 KiB (runtime) [entry] [rendered]
+asset pages_Login_js.output.js 2.83 KiB [emitted]
+asset pages_Dashboard_js.output.js 2.79 KiB [emitted]
+chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.55 KiB 8 modules
+  runtime modules 5.54 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 48 bytes [built] [code generated]
     [no exports used]
@@ -235,7 +235,7 @@ chunk (runtime: main) pages_Login_js.output.js 504 bytes [rendered]
     [exports: default]
     import() context element ./Login ./pages/ lazy ^\.\/.*$ namespace object ./Login
     import() context element ./Login.js ./pages/ lazy ^\.\/.*$ namespace object ./Login.js
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```
 
 ## Production mode
@@ -244,9 +244,9 @@ webpack 5.51.1 compiled successfully
 asset output.js 2.49 KiB [emitted] [minimized] (name: main)
 asset pages_Dashboard_js.output.js 456 bytes [emitted] [minimized]
 asset pages_Login_js.output.js 450 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.55 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.54 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.55 KiB 8 modules
+  runtime modules 5.54 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 48 bytes [built] [code generated]
     [no exports used]
@@ -267,5 +267,5 @@ chunk (runtime: main) pages_Login_js.output.js 504 bytes [rendered]
     [exports: default]
     import() context element ./Login ./pages/ lazy ^\.\/.*$ namespace object ./Login
     import() context element ./Login.js ./pages/ lazy ^\.\/.*$ namespace object ./Login.js
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```

@@ -326,7 +326,7 @@ console.log(lodash, isomorphicFetch);
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
@@ -613,7 +613,7 @@ chunk (runtime: runtime) runtime.js (runtime) 6.75 KiB ={other-vendors}= ={react
   > react react-vendors
   > react-dom react-vendors
   runtime modules 6.75 KiB 10 modules
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```
 
 ## Production mode
@@ -627,7 +627,7 @@ asset react-vendors.js 200 bytes [emitted] [minimized] (name: react-vendors)
 asset lazy_js.js 159 bytes [emitted] [minimized]
 Entrypoint app 207 bytes = app.js
 Entrypoint page1 287 bytes = page1.js
-Entrypoint react-vendors 2.57 KiB = runtime.js 2.37 KiB react-vendors.js 200 bytes
+Entrypoint react-vendors 2.56 KiB = runtime.js 2.37 KiB react-vendors.js 200 bytes
 Entrypoint other-vendors 2.6 KiB = runtime.js 2.37 KiB other-vendors.js 239 bytes
 chunk (runtime: runtime) app.js (app) 116 bytes <{other-vendors}> <{runtime}> >{page1}< [initial] [rendered]
   > ./app.js app
@@ -684,5 +684,5 @@ chunk (runtime: runtime) runtime.js (runtime) 6.75 KiB ={other-vendors}= ={react
   > react react-vendors
   > react-dom react-vendors
   runtime modules 6.75 KiB 10 modules
-webpack 5.51.1 compiled successfully
+webpack 5.73.0 compiled successfully
 ```

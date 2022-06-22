@@ -34,7 +34,7 @@ body {
   \*************************/
 /*! default exports */
 /*! exports [not provided] [no usage info] */
-/*! runtime requirements: module, __webpack_require__.p, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__.p, module, __webpack_require__.* */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "89a353e9c515885abd8e.png";
@@ -507,7 +507,7 @@ chunk (runtime: main) 1.output.css 23 bytes
     [no exports]
     [used exports unknown]
     import() ./lazy-style.css ./example.js 4:0-26
-webpack 5.66.0 compiled successfully
+webpack 5.73.0 compiled successfully
 ```
 
 ## Production mode
@@ -532,5 +532,5 @@ chunk (runtime: main) output.js, output.css (main) 218 bytes (javascript) 335 by
     [no exports]
     [no exports used]
     entry ./example.js main
-webpack 5.66.0 compiled successfully
+webpack 5.73.0 compiled successfully
 ```
