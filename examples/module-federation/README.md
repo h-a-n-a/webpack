@@ -2246,8 +2246,8 @@ mfe-b:
       provide shared module (default) date-fns@2.28.0 = ../../node_modules/date-fns/esm/index.js 42 bytes [built] [code generated]
       provide shared module (default) react@17.0.2 = ../../node_modules/react/index.js 42 bytes [built] [code generated]
   chunk (runtime: mfeBBB) node_modules_react_index_js.js 8.54 KiB [rendered]
-    > provide shared module (default) react@17.0.2 = ../../node_modules/react/index.js
     > consume shared module (default) react@^17.0.1 (singleton) (fallback: ../../node_modules/react/index.js)
+    > provide shared module (default) react@17.0.2 = ../../node_modules/react/index.js
     dependent modules 8.36 KiB [dependent] 2 modules
     ../../node_modules/react/index.js 190 bytes [built] [code generated]
   chunk (runtime: mfeBBB) src-b_Component_js.js 753 bytes (javascript) 84 bytes (consume-shared) [rendered]
@@ -2255,8 +2255,8 @@ mfe-b:
     dependent modules 84 bytes [dependent] 2 modules
     ./src-b/Component.js 753 bytes [built] [code generated]
   chunk (runtime: mfeBBB) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 557 KiB [rendered] reused as split chunk (cache group: defaultVendors)
-    > consume shared module (default) date-fns@^2.15.0 (strict) (fallback: ../../node_modules/date-fns/esm/index.js)
     > provide shared module (default) date-fns@2.28.0 = ../../node_modules/date-fns/esm/index.js
+    > consume shared module (default) date-fns@^2.15.0 (strict) (fallback: ../../node_modules/date-fns/esm/index.js)
     ../../node_modules/date-fns/esm/index.js + 272 modules 557 KiB [built] [code generated]
   mfe-b (webpack 5.73.0) compiled successfully
 
@@ -2287,8 +2287,8 @@ mfe-c:
     dependent modules 42 bytes [dependent] 1 module
     ./src-c/LazyComponent.js 506 bytes [built] [code generated]
   chunk (runtime: mfeCCC) vendors-node_modules_date-fns_esm_index_js.js (id hint: vendors) 557 KiB [rendered] reused as split chunk (cache group: defaultVendors)
-    > consume shared module (default) date-fns@^2.15.0 (strict) (fallback: ../../node_modules/date-fns/esm/index.js)
     > provide shared module (default) date-fns@2.28.0 = ../../node_modules/date-fns/esm/index.js
+    > consume shared module (default) date-fns@^2.15.0 (strict) (fallback: ../../node_modules/date-fns/esm/index.js)
     ../../node_modules/date-fns/esm/index.js + 272 modules 557 KiB [built] [code generated]
   chunk (runtime: mfeCCC) 42 bytes split chunk (cache group: default)
     > ./src-c/Component container entry ./Component
