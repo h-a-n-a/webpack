@@ -1,7 +1,8 @@
-@import "style-imported.css" screen and (orientation: portrait);
-@import "https://fonts.googleapis.com/css?family=Open+Sans";
+/* @import "style-imported.css" screen and (orientation: portrait); */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans"; */
 
 body {
 	background: green;
 	font-family: "Open Sans";
+  background: url(./images/file.png);
 }

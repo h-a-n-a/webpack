@@ -1,8 +1,11 @@
-:root {
+@import url(https://images.com/file.css);
+/* :root {
 	--large: 72px;
-}
+} */
 
 .main {
-	font-size: var(--large);
-	color: darkblue;
+	/* font-size: var(--large); */
+	/* color: darkblue; */
+  background: url(./images/file.png);
+  /* background: url(https://images/file.png); */
 }

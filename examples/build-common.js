@@ -21,6 +21,7 @@ const commonArgs = `--no-stats-colors ${statsArgs} ${publicPathArgs} ${extraArgs
 let readme = fs.readFileSync(require("path").join(process.cwd(), "template.md"), "utf-8");
 
 const doCompileAndReplace = (args, prefix, callback) => {
+  // for my debug only
 	if (!tc.needResults(readme, prefix)) {
 		callback();
 		return;
@@ -51,16 +52,19 @@ const doCompileAndReplace = (args, prefix, callback) => {
 	}
 
 	cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${displayReasons} ${commonArgs}`, (error, stdout, stderr) => {
+    console.log(stdout);
+    console.log();
 		if (stderr)
 			console.log(stderr);
 		if (error !== null)
 			console.log(error);
-		try {
-			readme = tc.replaceResults(readme, process.cwd(), stdout.replace(/[\r?\n]*$/, ""), prefix);
-		} catch (e) {
-			console.log(stderr);
-			throw e;
-		}
+      // for my debug only
+		// try {
+		// 	readme = tc.replaceResults(readme, process.cwd(), stdout.replace(/[\r?\n]*$/, ""), prefix);
+		// } catch (e) {
+		// 	console.log(stderr);
+		// 	throw e;
+		// }
 		callback();
 	});
 };
