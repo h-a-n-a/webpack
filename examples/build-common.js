@@ -18,14 +18,13 @@ const statsArgs = global.NO_STATS_OPTIONS ? "" : "--stats-chunks  --stats-module
 const publicPathArgs = global.NO_PUBLIC_PATH ? "" : '--output-public-path "dist/"';
 const commonArgs = `--no-stats-colors ${statsArgs} ${publicPathArgs} ${extraArgs} ${targetArgs}`;
 
-let readme = fs.readFileSync(require("path").join(process.cwd(), "template.md"), "utf-8");
+// let readme = fs.readFileSync(require("path").join(process.cwd(), "template.md"), "utf-8");
 
 const doCompileAndReplace = (args, prefix, callback) => {
-  // for my debug only
-	if (!tc.needResults(readme, prefix)) {
-		callback();
-		return;
-	}
+	// if (!tc.needResults(readme, prefix)) {
+	// 	callback();
+	// 	return;
+	// }
 
 	const deleteFiles = (dir) => {
 		const targetDir = path.resolve("dist", dir);
@@ -70,10 +69,10 @@ const doCompileAndReplace = (args, prefix, callback) => {
 };
 
 async.series([
-	callback => doCompileAndReplace("--mode production --env production", "production", callback),
-	callback => doCompileAndReplace("--mode development --env development --devtool none", "development", callback),
-	callback => doCompileAndReplace("--mode none --env none --output-pathinfo verbose", "", callback)
+	// callback => doCompileAndReplace("--mode production --env production", "production", callback),
+	callback => doCompileAndReplace("--mode development --env development --no-devtool", "development", callback),
+	// callback => doCompileAndReplace("--mode none --env none --output-pathinfo verbose", "", callback)
 ], () => {
-	readme = tc.replaceBase(readme);
-	fs.writeFile("README.md", readme, "utf-8", function () { });
+	// readme = tc.replaceBase(readme);
+	// fs.writeFile("README.md", readme, "utf-8", function () { });
 });
