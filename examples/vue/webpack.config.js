@@ -7,7 +7,7 @@ const configuration = {
 	mode: "none",
 	target: "node",
 	entry: {
-		main: path.resolve(__dirname, "./src/index.mjs")
+		main: path.resolve(__dirname, "./src/index.js")
 	},
 	optimization: {
 		moduleIds: "named"
@@ -23,17 +23,25 @@ const configuration = {
 				]
 			},
 			{
-				test: /\.less/,
-				use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
+				test: /\.js$/,
+				use: [require.resolve("./webpack_loader/js-test-loader")]
 			},
 			{
-				test: /\.css/,
-				use: ["css-loader"]
-			},
-			{
-				test: /\.vue/,
-				use: [require.resolve("./webpack_loader/vue.js")]
+				test: /\.vue$/,
+				use: [require.resolve("./webpack_loader/js-test-loader")]
 			}
+			// {
+			// 	test: /\.less/,
+			// 	use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
+			// },
+			// {
+			// 	test: /\.css/,
+			// 	use: ["css-loader"]
+			// },
+			// {
+			// 	test: /\.vue/,
+			// 	use: [require.resolve("./webpack_loader/vue.js")]
+			// }
 		]
 	}
 };
