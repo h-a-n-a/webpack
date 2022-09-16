@@ -1,6 +1,12 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
 	entry: {
-		main: "./main.js"
+		other: "./other.js",
+		main: {
+			dependOn: "other",
+			import: "./main.js"
+		}
 	},
 	module: {
 		rules: [
@@ -9,5 +15,6 @@ module.exports = {
 				use: ["babel-loader"]
 			}
 		]
-	}
+	},
+	plugin: [new HtmlWebpackPlugin()]
 };

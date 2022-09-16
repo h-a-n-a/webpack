@@ -13,10 +13,10 @@ const async = require("neo-async");
 const extraArgs = "";
 
 const targetArgs = global.NO_TARGET_ARGS ? "" : "--entry ./example.js --output-filename output.js";
-const displayReasons = global.NO_REASONS ? "" : "--stats-reasons --stats-used-exports --stats-provided-exports";
+// const displayReasons = global.NO_REASONS ? "" : "--stats-reasons --stats-used-exports --stats-provided-exports";
 const statsArgs = global.NO_STATS_OPTIONS ? "" : "--stats-chunks  --stats-modules-space 99999 --stats-chunk-origins";
 const publicPathArgs = global.NO_PUBLIC_PATH ? "" : '--output-public-path "dist/"';
-const commonArgs = `--no-stats-colors ${statsArgs} ${publicPathArgs} ${extraArgs} ${targetArgs}`;
+const commonArgs = ` ` || `--no-stats-colors ${statsArgs} ${publicPathArgs} ${extraArgs} ${targetArgs}`;
 
 // let readme = fs.readFileSync(require("path").join(process.cwd(), "template.md"), "utf-8");
 
@@ -49,8 +49,11 @@ const doCompileAndReplace = (args, prefix, callback) => {
 	} catch (e) {
 		throw new Error("Please install webpack-cli at root.");
 	}
+  // console.log(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${displayReasons} ${commonArgs}`);
 
-	cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${displayReasons} ${commonArgs}`, (error, stdout, stderr) => {
+  console.log(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${commonArgs}`);
+
+	cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${commonArgs}`, (error, stdout, stderr) => {
     console.log(stdout);
     console.log();
 		if (stderr)
