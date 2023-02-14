@@ -7,6 +7,11 @@ module.exports = {
 			{
 				test: /\.(png|jpg|svg)$/,
 				type: "asset"
+			},
+			{
+				test: /\.js$/,
+				use: [require("path").resolve("./js-loader")],
+				type: "javascript/auto"
 			}
 		]
 	}

@@ -5,59 +5,21 @@ Files can be imported like other modules without file-loader.
 # example.js
 
 ```javascript
-import png from "./images/file.png";
-import jpg from "./images/file.jpg";
-import svg from "./images/file.svg";
-
-// const container = document.createElement("div");
-// Object.assign(container.style, {
-// 	display: "flex",
-// 	justifyContent: "center"
-// });
-// document.body.appendChild(container);
-
-// function createImageElement(title, src) {
-// 	const div = document.createElement("div");
-// 	div.style.textAlign = "center";
-
-// 	const h2 = document.createElement("h2");
-// 	h2.textContent = title;
-// 	div.appendChild(h2);
-
-// 	const img = document.createElement("img");
-// 	img.setAttribute("src", src);
-// 	img.setAttribute("width", "150");
-// 	div.appendChild(img);
-
-// 	container.appendChild(div);
-// }
-
-// [png, jpg, svg].forEach(src => {
-// 	createImageElement(src.split(".").pop(), src);
-// });
+_{{example.js}}_
 ```
 
 # webpack.config.js
 
 ```javascript
-module.exports = {
-	output: {
-		assetModuleFilename: "images/[hash][ext]"
-	},
-	module: {
-		rules: [
-			{
-				test: /\.(png|jpg|svg)$/,
-				type: "asset"
-			}
-		]
-	}
-};
+_{{webpack.config.js}}_
 ```
 
 # js/output.js
 
 ```javascript
+<<<<<<< Updated upstream
+_{{dist/output.js}}_
+=======
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
@@ -169,37 +131,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// const container = document.createElement("div");
-// Object.assign(container.style, {
-// 	display: "flex",
-// 	justifyContent: "center"
-// });
-// document.body.appendChild(container);
+const container = document.createElement("div");
+Object.assign(container.style, {
+	display: "flex",
+	justifyContent: "center"
+});
+document.body.appendChild(container);
 
-// function createImageElement(title, src) {
-// 	const div = document.createElement("div");
-// 	div.style.textAlign = "center";
+function createImageElement(title, src) {
+	const div = document.createElement("div");
+	div.style.textAlign = "center";
 
-// 	const h2 = document.createElement("h2");
-// 	h2.textContent = title;
-// 	div.appendChild(h2);
+	const h2 = document.createElement("h2");
+	h2.textContent = title;
+	div.appendChild(h2);
 
-// 	const img = document.createElement("img");
-// 	img.setAttribute("src", src);
-// 	img.setAttribute("width", "150");
-// 	div.appendChild(img);
+	const img = document.createElement("img");
+	img.setAttribute("src", src);
+	img.setAttribute("width", "150");
+	div.appendChild(img);
 
-// 	container.appendChild(div);
-// }
+	container.appendChild(div);
+}
 
-// [png, jpg, svg].forEach(src => {
-// 	createImageElement(src.split(".").pop(), src);
-// });
+[_images_file_png__WEBPACK_IMPORTED_MODULE_0__, _images_file_jpg__WEBPACK_IMPORTED_MODULE_1__, _images_file_svg__WEBPACK_IMPORTED_MODULE_2__].forEach(src => {
+	createImageElement(src.split(".").pop(), src);
+});
 
 })();
 
 /******/ })()
 ;
+>>>>>>> Stashed changes
 ```
 
 # Info
@@ -207,15 +170,19 @@ __webpack_require__.r(__webpack_exports__);
 ## webpack output
 
 ```
+<<<<<<< Updated upstream
+_{{stdout}}_
+=======
 asset images/89a353e9c515885abd8e.png 14.6 KiB [emitted] [immutable] [from: images/file.png] (auxiliary name: main)
-asset output.js 12.9 KiB [emitted] (name: main)
-chunk (runtime: main) output.js (main) 9.64 KiB (javascript) 14.6 KiB (asset) 306 bytes (runtime) [entry] [rendered]
+asset output.js 13 KiB [emitted] (name: main)
+chunk (runtime: main) output.js (main) 9.58 KiB (javascript) 14.6 KiB (asset) 306 bytes (runtime) [entry] [rendered]
   > ./example.js main
   dependent modules 8.86 KiB (javascript) 14.6 KiB (asset) [dependent] 3 modules
   runtime modules 306 bytes 2 modules
-  ./example.js 805 bytes [built] [code generated]
+  ./example.js 742 bytes [built] [code generated]
     [no exports]
     [used exports unknown]
     entry ./example.js main
 webpack 5.73.0 compiled successfully
+>>>>>>> Stashed changes
 ```

@@ -1,6 +1,7 @@
-import png from "./images/file.png";
-import jpg from "./images/file.jpg";
-import svg from "./images/file.svg";
+import foo from "./foo";
+// import jpg from "./images/file.jpg";
+// import svg from "./images/file.svg";
+console.log(foo);
 
 // const container = document.createElement("div");
 // Object.assign(container.style, {

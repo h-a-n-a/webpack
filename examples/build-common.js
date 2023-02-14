@@ -13,18 +13,18 @@ const async = require("neo-async");
 const extraArgs = "";
 
 const targetArgs = global.NO_TARGET_ARGS ? "" : "--entry ./example.js --output-filename output.js";
-const displayReasons = global.NO_REASONS ? "" : "--stats-reasons --stats-used-exports --stats-provided-exports";
+// const displayReasons = global.NO_REASONS ? "" : "--stats-reasons --stats-used-exports --stats-provided-exports";
 const statsArgs = global.NO_STATS_OPTIONS ? "" : "--stats-chunks  --stats-modules-space 99999 --stats-chunk-origins";
 const publicPathArgs = global.NO_PUBLIC_PATH ? "" : '--output-public-path "dist/"';
-const commonArgs = `--no-stats-colors ${statsArgs} ${publicPathArgs} ${extraArgs} ${targetArgs}`;
+const commonArgs = ` ` || `--no-stats-colors ${statsArgs} ${publicPathArgs} ${extraArgs} ${targetArgs}`;
 
-let readme = fs.readFileSync(require("path").join(process.cwd(), "template.md"), "utf-8");
+// let readme = fs.readFileSync(require("path").join(process.cwd(), "template.md"), "utf-8");
 
 const doCompileAndReplace = (args, prefix, callback) => {
-	if (!tc.needResults(readme, prefix)) {
-		callback();
-		return;
-	}
+	// if (!tc.needResults(readme, prefix)) {
+	// 	callback();
+	// 	return;
+	// }
 
 	const deleteFiles = (dir) => {
 		const targetDir = path.resolve("dist", dir);
@@ -49,27 +49,33 @@ const doCompileAndReplace = (args, prefix, callback) => {
 	} catch (e) {
 		throw new Error("Please install webpack-cli at root.");
 	}
+  // console.log(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${displayReasons} ${commonArgs}`);
 
-	cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${displayReasons} ${commonArgs}`, (error, stdout, stderr) => {
+  console.log(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${commonArgs}`);
+
+	cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${commonArgs}`, (error, stdout, stderr) => {
+    console.log(stdout);
+    console.log();
 		if (stderr)
 			console.log(stderr);
 		if (error !== null)
 			console.log(error);
-		try {
-			readme = tc.replaceResults(readme, process.cwd(), stdout.replace(/[\r?\n]*$/, ""), prefix);
-		} catch (e) {
-			console.log(stderr);
-			throw e;
-		}
+      // for my debug only
+		// try {
+		// 	readme = tc.replaceResults(readme, process.cwd(), stdout.replace(/[\r?\n]*$/, ""), prefix);
+		// } catch (e) {
+		// 	console.log(stderr);
+		// 	throw e;
+		// }
 		callback();
 	});
 };
 
 async.series([
-	callback => doCompileAndReplace("--mode production --env production", "production", callback),
-	callback => doCompileAndReplace("--mode development --env development --devtool none", "development", callback),
-	callback => doCompileAndReplace("--mode none --env none --output-pathinfo verbose", "", callback)
+	// callback => doCompileAndReplace("--mode production --env production", "production", callback),
+	callback => doCompileAndReplace("--mode development --env development --no-devtool", "development", callback),
+	// callback => doCompileAndReplace("--mode none --env none --output-pathinfo verbose", "", callback)
 ], () => {
-	readme = tc.replaceBase(readme);
-	fs.writeFile("README.md", readme, "utf-8", function () { });
+	// readme = tc.replaceBase(readme);
+	// fs.writeFile("README.md", readme, "utf-8", function () { });
 });
